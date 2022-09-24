@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #343a40!important;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid black;  /* creates padding around scroll thumb */
+}
+
+  /* You can add global styles to this file, and also import other style files */
+  .middle-content::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .middle-content::-webkit-scrollbar-track {
+    background: #343a40!important;        /* color of the tracking area */
+  }
+  
+  .middle-content::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+  
+body{
+
+  background: radial-gradient(
+    ellipse at center,
+    #6c9d2c 1%,
+    #1c5a3d 100%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0264d6', endColorstr='#1c2b5a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: calc(100vh);
+  width: 100%;
+  font: 87.5%/1.5em "Open Sans", sans-serif;
+  margin: 0;
+}
+
+[class*="fontawesome-"]:before {
+    font-family: "FontAwesome", sans-serif;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+.clearfix {
+  *zoom: 1;
+}
+
+#login form {
+  width: 250px;
+}
+
+#login form input[type="submit"]:hover {
+  background-color: #d44179;
+}
+
+  #login > p {
+    text-align: center;
+  }
+  
+  #login > p span {
+    padding-left: 5px;
+  }
+  .middle {
+    display: flex;
+    width: 600px;
+    margin-top: 40px;
+  }
+  
+  a:hover{
+    color:black;
+  }
+  
+  .validationMsg
+  {
+    width: 208px;
+    text-align: left;
+    height:25px;
+  }
+  
+  #login form input {
+    height: 35px;
+  }
+
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  input {
+    border: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+    -webkit-appearance: none;
+  }
+
+  .btn {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #000000;
+    color: #eee;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1px 10px;
+    height: 30px;
+  }
+  
