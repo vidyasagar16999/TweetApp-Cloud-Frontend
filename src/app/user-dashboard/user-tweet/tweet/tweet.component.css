@@ -1,0 +1,23 @@
+.messageComment
+{
+    width:88%;
+}
+
+.no-bg
+{
+    background-color: none !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff !important;
+  }
+
+.styling{
+    color: blue;
+    font-size: 18px;
+}
+.stylingReply{
+    color: rgb(20, 18, 19);
+    font-size: 22px;
+}

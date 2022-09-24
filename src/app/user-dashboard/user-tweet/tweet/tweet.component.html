@@ -1,0 +1,46 @@
+<div class="card" *ngIf="tweet" style="margin: 20px;">
+    <div class="card-header">
+        <div class="d-flex">
+            <h5>{{tweet.userName |titlecase}}</h5>
+        </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">#{{tweet.tweetTag}}</h5>
+        <p class="card-text" style="font-size: 20px;"><i class="fas fa-2x fa-quote-left"></i> &nbsp; {{tweet.tweet}}</p>
+        <div class="form" id="{{tweet.tweetId}}">
+            <div class="d-flex" style="font-size: 20px;">
+                <div>
+                    <button class="btn btn-primary" id="liked"><i class="fas fa-heart"></i></button> {{tweet.like}}
+                </div>
+                <div class="ml-auto">
+                    <i class="far fa-comment"></i>{{tweet.tweetReply.length}}
+                </div>
+            </div>
+            <div class="my-4">
+                <form class="d-inline" [formGroup]="addCommentForm" (ngSubmit)="addComments(tweet.tweetId)">
+                    <div class="d-flex">
+                        <div class="messageComment">
+                            <textarea class="form-control task-textarea" rows="1" formControlName="comments"></textarea>
+                        </div>
+                        <div class="ml-auto">
+                            <button class="btn" [disabled]="!addCommentForm.valid">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div *ngIf="displayNoCommentsData == 'true'">
+                <div class="data">
+                    <div class="d-flex styling">
+                        <b>Tweet Comments/Replies</b>
+                    </div><br>
+                    <div class="d-flex pb-4 stylingReply fa-comment" *ngFor="let obj of tweet.tweetReply">
+                    {{obj}}
+                </div>
+                </div>
+            </div>
+            <div *ngIf="displayNoCommentsData == 'false'" class="d-flex styling">
+                <p> No Comments</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="main">
+    <div class="logo text-right"> Tweet App Login
+        <div class="clearfix"></div>
+    </div><br>
+    <div class="container">
+        <div class="middle text-center">
+            <div id="login">
+                <form [formGroup]="UserLogin" autocomplete="off" (submit)="OnSubmit()">
+                    <fieldset class="clearfix">
+                        <div class="row">
+                            <div class="col-md-2"><i class="fa fa-user fa-2x"></i> </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" formControlName="username"
+                                    placeholder="User Name">
+                                <div class="validationMsg">
+                                    <small class="text-danger" *ngIf="UserLogin.get('username')?.touched
+                                        && UserLogin.get('username')?.errors?.required">
+                                        User Name is mandatory
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><i class="fa fa-lock fa-2x"></i> </div>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" formControlName="password"
+                                    placeholder="Password">
+                                <div class="validationMsg">
+                                    <small class="text-danger"
+                                        *ngIf="UserLogin.get('password')?.touched && UserLogin.get('password')?.errors?.required">
+                                        Password is mandatory
+                                    </small>
+                                    <small class="text-danger"
+                                        *ngIf="UserLogin.get('password')?.touched && UserLogin.get('password')?.errors?.minlength">Minimun
+                                        6 characters required
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <button class="btn btn-lg my-2" [disabled]="!UserLogin.valid">Login</button>
+                            </div>
+                            <div class="col-md-6" style="text-align: right; font-size: 18px;">
+                                <a routerLink='/forgot-password'>Forgot Password</a>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-md-12 text-right" style="font-size: 18px;">
+                                <a routerLink='/register'>Don't have an account? Register</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="clearfix"></div>
+                </form>
+                <div class="clearfix"></div>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+*{
+    background-color: white;
+}
+
+  .middle-content {
+    display: block;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: #007bff !important;
+  }
+
+  input
+  {
+    border-radius: 40px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  input :hover
+  {
+    border-radius: 40px;
+  }
+  
+  .left {
+    width: 350px;
+    float: left;
+    border-right: 3px solid black;
+    height: 100vh;
+  }
+
+.left>{
+  margin-bottom: 52px;
+  border:0px;
+}
+
+  .right {
+    background-color: white;
+    width: 300px;
+    float: right;
+    height: 100vh;
+  }
+
+  .left>.container>ul{  
+    padding-top:40px;
+    padding-left:25px;
+  }
+
+  .left>.container>ul>li
+  {
+      border:0px;
+  }
+
+   .left>.container>ul>li>a{
+      
+      font-weight: 900;
+  } 
+  
+  a{
+    color:black !important;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff;
+    border-radius: 20px;
+    height: 38px;
+    width: 160px;
+  }
+
+  .list-group-item
+  {
+    margin-bottom: 30px;
+    font-size: large;
+  }
+
+.searchBox
+{
+  height: 75px; padding: 18px;
+  font-size: larger;
+  border: 1px;
+  font-weight: bold;
+}

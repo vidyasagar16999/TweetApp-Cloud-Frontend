@@ -1,0 +1,24 @@
+<div *ngIf="displayNoTweetsData == 'false'">
+<div class="card" *ngFor="let i of othersTweets" style="margin: 20px;">
+    <div class="card-header">
+        <div class="d-flex">
+            <h5>{{i.userName |titlecase}} {{i.lastName | titlecase}}</h5>
+        </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">#{{i.tweetTag}}</h5>
+        <p class="card-text" style="font-size: 20px;"><i class="fas fa-2x fa-quote-left"></i> &nbsp; {{i.tweet}}</p>
+        <div class="d-flex" style="font-size: 20px;">
+            <a class="viewLikes" (click)="LikeTweetByID(i.tweetId)"> <i
+                    class="far fa-thumbs-up"></i> </a> {{i.like}}
+            <div class="ml-auto">
+                <a class="viewcomments" [routerLink]="['/user-dashboard/tweet', i.tweetId]"><i
+                        class="far fa-comment"></i></a> {{i.tweetReply.length}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div *ngIf="displayNoTweetsData == 'true'">
+    <h1> No Tweets Found</h1>
+</div>

@@ -1,0 +1,18 @@
+label{
+    font-size: 14px;
+    font-weight: 800;
+}
+
+p{
+    font-weight: 800;
+}
+
+h3{
+    font-weight: bolder;
+}
+
+.text-danger
+{
+    font-weight: 700;
+    font-size: 16px;
+}

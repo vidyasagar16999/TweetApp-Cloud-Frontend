@@ -1,0 +1,50 @@
+<section class="mysection">
+
+    <aside class="left">
+        <div class="container">
+            <ul class="list-group text-center">
+                <li class="searchBox text-left">
+                    <input type="text" [(ngModel)]="userName" name="userName" placeholder="Search By UserName.."> &nbsp;
+                    <a [routerLink]="['/user-dashboard/search', userName]"><i class="fas fa-search"></i></a>
+                </li>
+                <li class="list-group-item headerlist text-left">
+                    <i class="fas fa-2x fa-users"></i>
+                    <a class="mx-1" class="my-tweets" routerLink="/user-dashboard/my-tweets">My Tweets</a>
+                </li>
+                <li class="list-group-item headerlist text-left">
+                    <i class="fas fa-2x fa-users"></i>
+                    <a class="mx-1" routerLink="/user-dashboard/all-tweets">All Tweets</a>
+                </li>
+                <li class="list-group-item headerlist text-left">
+                    <i class="fas fa-2x fa-users"></i>
+                    <a class="mx-1" routerLink="/user-dashboard/all-users">All Users</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </aside>
+    <aside class="right">
+        <div classs="container">
+            <div class="profile-img pl-5 ml-4">
+                <img src="\assets\profile.png" width="150" class="avatar img-circle" alt="avatar" />
+            </div><br>
+            <div class="text-center h6 my-2">
+                {{UserName}}
+            </div><br>
+            <ul class="list-group text-center">
+                <li class="list-group-item headerlist text-center">
+                    <i class="fas fa-2x fa-user-alt"></i>
+                    <a class="mx-1" routerLink="/user-dashboard/my-profile">My Profile</a>
+                </li>
+                <li class="list-group-item headerlist text-center">
+                    <button type="button" class="btn btn-primary" routerLink="/user-dashboard/add-tweet">Tweet
+                        Now</button>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div class="middle-content custom-scrollbar">
+        <router-outlet></router-outlet>
+    </div>
+</section>

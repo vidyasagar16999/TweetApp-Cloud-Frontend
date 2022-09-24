@@ -1,0 +1,27 @@
+  
+  * {
+    box-sizing: border-box;
+    margin: 0px auto;
+  }
+  
+  p {
+    line-height: 1.5em;
+  }
+  
+  .container {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-danger
+  {
+      font-weight: 700;
+  }
+  
+  .middle {
+      display: flex;
+      width: 600px;
+      margin-top: 40px;
+  }

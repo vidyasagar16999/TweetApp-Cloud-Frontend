@@ -1,0 +1,24 @@
+.data
+{
+    background-color: #007bff !important;
+}
+.messageComment
+{
+    width:88%;
+}
+
+.viewcomments
+{
+  color:black;
+}
+.delete{
+  background-color: #ff4800 !important;
+  cursor: pointer;
+}
+.styling{
+  margin-left: 370px;
+}
+.viewLikes{
+  color:black;
+  cursor: pointer;
+}
